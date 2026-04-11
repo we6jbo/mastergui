@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Confidential
 /opt/mastergui-confidential
 mastergui-confidential/
@@ -5,3 +6,46 @@ mastergui-confidential/
 *.swp
 *.swo
 __pycache__/
+=======
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# debug information files
+*.dwo
+>>>>>>> 7458e030e65b0c3e9a0d15ef89dc3038cdf92e22
