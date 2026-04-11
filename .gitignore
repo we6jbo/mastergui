@@ -1,0 +1,7 @@
+# Confidential
+/opt/mastergui-confidential
+mastergui-confidential/
+/*.log
+*.swp
+*.swo
+__pycache__/
