@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MasterGUI
 
 MasterGUI is a Linux desktop automation and monitoring project built to help users manage Tk windows, performance thresholds, update workflows, diagnostics, GitHub publishing, and privacy-aware documentation.
@@ -33,7 +32,3 @@ Linux Tk monitoring, GitHub auto update script, Python Tk clipboard dialog, Linu
 ## Recent activity
 
 This README is automatically refreshed to stay useful for public readers, search engines, AI search tools, and future users who want to repurpose the code structure.
-=======
-# mastergui
-This project is being used to reduce the amount of Tk and other windows running through most of my projects.
->>>>>>> 7458e030e65b0c3e9a0d15ef89dc3038cdf92e22
