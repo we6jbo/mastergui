@@ -371,7 +371,12 @@ commit_and_push_if_needed() {
 
 schedule_check_verification() {
     (
-        sleep 300
+        sleep 60
+        if ! /opt/mastergui/fix1.sh >> /opt/mastergui/fix-run.log 2>&1; then
+    echo "$(date): fix1.sh failed, running fix2.sh" >> /opt/mastergui/fix-run.log
+    /opt/mastergui/fix2.sh >> /opt/mastergui/fix-run.log 2>&1
+fi 
+        sleep 230
         local remote_check local_check report
         local_check=$(cat "$CHECK_FILE" 2>/dev/null || echo "")
         remote_check=$(remote_fetch "$REMOTE_CHECK_URL" 2>/dev/null | tr -d '\r\n' || echo "")
@@ -391,6 +396,19 @@ schedule_check_verification() {
                 echo "Please explain why the push may not have updated remote content."
                 echo "Please help me fix authentication, branch, remote, commit, push, or sync issues."
                 echo "Please write a safe repair script to /tmp/a/fixes.sh with backups to /home/we6jbo/backup-this."
+echo "To add a first repair attempt, tell ChatGPT: add the safest normal fix to /opt/mastergui/fix1.sh."
+echo "fix1.sh should contain the first-choice repair steps only."
+echo "fix1.sh should make backups before changing anything."
+echo "fix1.sh should exit 0 if the repair worked."
+echo "fix1.sh should exit nonzero if the repair failed or needs a fallback."
+
+echo "To add a fallback repair attempt, tell ChatGPT: add the backup repair plan to /opt/mastergui/fix2.sh."
+echo "fix2.sh should only run if fix1.sh reports an error."
+echo "fix2.sh should be more cautious and should not force-push, hard-reset, or delete files unless I explicitly approve it."
+echo "fix2.sh should also make backups before changing anything."
+
+echo "In run.sh, call fix1.sh first, and only call fix2.sh if fix1.sh fails."
+echo "Use this pattern: if ! /opt/mastergui/fix1.sh; then /opt/mastergui/fix2.sh; fi"
             } > "$report"
             ask_chatgpt_popup "MasterGUI GitHub Check Failed" "$report"
             log "Remote check.txt mismatch detected after scheduled verification."
