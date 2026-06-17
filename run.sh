@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# MASTERGUI_LANGUAGETOOLS_GUARD_PATCH_START
+if [ -f '/home/we6jbo/.mastergui_languagetools_guard/shell_guard.sh' ]; then
+  . '/home/we6jbo/.mastergui_languagetools_guard/shell_guard.sh'
+fi
+# MASTERGUI_LANGUAGETOOLS_GUARD_PATCH_END
+
 set -u
 
 BASE_DIR="/opt/mastergui"

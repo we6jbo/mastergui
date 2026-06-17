@@ -1,4 +1,27 @@
 #!/usr/bin/env python3
+
+# MASTERGUI_LANGUAGETOOLS_GUARD_PATCH_START
+try:
+    import sys as _mglt_sys
+    _mglt_sys.path.insert(0, '/home/we6jbo/.mastergui_languagetools_guard')
+    import guard_runtime as _mglt_guard
+    _mglt_guard.install()
+except Exception as _mglt_e:
+    try:
+        import pathlib as _mglt_pathlib, datetime as _mglt_datetime
+        _mglt_dir = _mglt_pathlib.Path('/home/we6jbo/share-to-chatgpt-jun16')
+        _mglt_dir.mkdir(parents=True, exist_ok=True)
+        (_mglt_dir / ("guard-python-load-error-" + _mglt_datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".txt")).write_text(
+            "ChatGPT, please write another script to diagnose this guard load problem.\n"
+            "Path: " + __file__ + "\n"
+            "Problem: Python guard failed to load.\n"
+            "Error: " + str(_mglt_e) + "\n"
+            "Date/time: " + _mglt_datetime.datetime.now().isoformat(timespec="seconds") + "\n"
+        )
+    except Exception:
+        pass
+# MASTERGUI_LANGUAGETOOLS_GUARD_PATCH_END
+
 import sys
 import os
 import tkinter as tk
