@@ -48,4 +48,5 @@ __pycache__/
 
 # debug information files
 *.dwo
+check.txt
 >>>>>>> 7458e030e65b0c3e9a0d15ef89dc3038cdf92e22
