@@ -1,0 +1,17 @@
+{
+  "backup": {
+    "root": "/opt/languagetools-donttouch",
+    "store_profile": "mastergui"
+  },
+  "blob": "4740e8d880d7522ff3684e5ec36b5012ee80180456fc4feb89c1f38fd092e618-b33cd2eebf28f249b77abc509fef9ffba3a209641e45a9673a09004fd61e93f4.blob",
+  "captured_at": "2026-06-23T23:00:01-07:00",
+  "digest": "b33cd2eebf28f249b77abc509fef9ffba3a209641e45a9673a09004fd61e93f4",
+  "enc_rel": "TIwbQM52cj2Mafx17drKVTTU5dLqsYoI8-Gtc_o2AdbiaKCWP1qF",
+  "kind": "file",
+  "mode": 420,
+  "mtime": 1782280736,
+  "profile": "mastergui",
+  "rid": "4740e8d880d7522ff3684e5ec36b5012ee80180456fc4feb89c1f38fd092e618",
+  "schema": "agl_snapshot_v2",
+  "size": 92323
+}

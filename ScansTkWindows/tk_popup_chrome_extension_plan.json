@@ -1,0 +1,20 @@
+{
+  "project_path": "/opt/mastergui/ScansTkWindows",
+  "available_port": 27691,
+  "port_file_options": [
+    "/opt/mastergui/27691",
+    "/opt/mastergui/{project_folder}/27691",
+    "/opt/mastergui/{folder}/{folder}/27691"
+  ],
+  "owner_expected": "we6jbo:we6jbo",
+  "login_user_expected": "we6jbo",
+  "tk_popup_goal": {
+    "watch_for_tk_popups": true,
+    "write_json_in_project_area": true,
+    "identify_tk_popups": true,
+    "map_tk_popups_to_chrome_extension_ui": true,
+    "chrome_extension_should_use_port": 27691
+  },
+  "chatgpt_prompt": "Chatgpt, help me build my /opt/mastergui/ScansTkWindows that will do the following. Chatgpt will have 27691. It will wait until we6jbo:we6jbo is logged in. It will make sure all files are owned by we6jbo:we6jbo that it creates. It will watch for Tk popups and it will write a JSON file in the project name area that will identify the Tk popups including how every Tk popup could be placed into a Google Chrome extension using the port at /opt/mastergui/27691 or /opt/mastergui/{project folder}/27691 or /opt/mastergui/{folder}/{folder}/27691.",
+  "created_at": "2026-06-29T10:01:19"
+}
